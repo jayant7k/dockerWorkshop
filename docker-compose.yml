@@ -1,0 +1,15 @@
+version: '3'
+services:
+  php:
+    image: phpapp
+    volumes: 
+      - /home/jayant/temp/dockerWorkshop/phpRedis/code:/var/www/html
+    ports:
+      - "80:80"
+    extra_hosts:
+      - "redis:172.17.0.1"
+  node:
+    image: nodeapp
+    ports:
+      - "8080:8080"
+
